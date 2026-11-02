@@ -12,18 +12,18 @@ secret = Gina
 essai  = Hikari
 
 ohayo
-secret ← guess 1..100
-write "J'ai un nombre entre 1 et 100. Devine !"
+secret ← guess 1..100 onegai
+write "J'ai un nombre entre 1 et 100. Devine !" onegai
 
 repeat:
-    essai ← read
+    essai ← read onegai
     if essai > secret:
-        write "Trop grand !"
+        write "Trop grand !" onegai
     else if essai < secret:
-        write "Trop petit !"
+        write "Trop petit !" onegai
     desu
 until essai == secret
 
-write "Bravo Senpai ! ♡"
+write "Bravo Senpai ! ♡" onegai
 arigatou minna
 oyasumi

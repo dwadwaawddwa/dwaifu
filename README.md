@@ -33,10 +33,41 @@ arigatou minna
 oyasumi
 ```
 
+## Lancer un programme
+
+Il faut Python 3.10 ou plus, rien d'autre à installer. Depuis le dossier du dépôt :
+
+```bat
+kawaii run examples\addition.uwu            :: avec le chat du club
+kawaii run examples\addition.uwu --quiet    :: seulement la vraie sortie
+kawaii run examples\devine.uwu --seed 42    :: hasard fixé
+kawaii run prog.uwu --chatty                :: chaque doigt et chaque verdict
+kawaii check prog.uwu --rank                :: vérifier sans lancer + rang kawaii
+kawaii explain prog.uwu                     :: chaque ligne V3 et ses phrases V2
+```
+
+Ailleurs que sur Windows : `python -m kawaii run …` depuis le dossier du dépôt.
+Les tests : `python -m unittest discover tests`.
+
+Ce que l'interpréteur 0.1 ne fait pas encore :
+
+- les lignes s'exécutent une par une, sans les tours simultanés de la V2 : `start Aya` joue
+  le plan d'Aya jusqu'au bout puis revient, et `wait` ne fait rien ;
+- les phrases V2 (`Sakura count up`…) ne sont pas encore acceptées dans un `.uwu` ;
+- l'énergie n'est pas modélisée : `TiredBaka` sert seulement à arrêter une boucle sans fin
+  (2 millions d'instructions, `--max-steps` pour changer) ;
+- `+=`, `-=`, `*=`, `/=` calculent directement, avec les mêmes résultats et erreurs que les
+  jutsu de `maths.uwu` ; diviser par 0 donne `ZeroBaka`.
+
+Attention : chaque ordre sans `onegai` coûte 1 point d'affection (sur 50 au départ).
+Une boucle impolie finit donc en `HeartbreakBaka`. C'est voulu.
+
 ## Le dépôt
 
 | Dossier | Contenu |
 | --- | --- |
+| `kawaii/` | L'interpréteur : lexer, parser, runtime, chat, explain, CLI |
+| `tests/` | 40 tests (`python -m unittest discover tests`) |
 | `examples/` | `bonjour.uwu`, `addition.uwu`, `devine.uwu` |
 | `stdlib/` | `maths.uwu` : `add`, `subtract`, `multiply`, `divide` écrits en dwaifu |
 | `vscode-dwaifu/` | Extension VS Code : `.uwu` reconnu et coloré |
