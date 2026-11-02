@@ -1,0 +1,29 @@
+<3 Devine le nombre : Gina en choisit un, Senpai cherche <3
+
+club:
+    Yuki-sama   : boss
+    Gina-chan   : guesser
+    Hikari-chan : reader
+    Nana-chan   : judge
+    Mio-chan    : writer
+desu
+
+secret = Gina
+essai  = Hikari
+
+ohayo
+secret ← guess 1..100
+write "J'ai un nombre entre 1 et 100. Devine !"
+
+repeat:
+    essai ← read
+    if essai > secret:
+        write "Trop grand !"
+    else if essai < secret:
+        write "Trop petit !"
+    desu
+until essai == secret
+
+write "Bravo Senpai ! ♡"
+arigatou minna
+oyasumi

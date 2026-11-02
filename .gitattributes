@@ -1,0 +1,7 @@
+# GitHub (Linguist) ne connaît pas encore dwaifu.
+# En attendant, les .uwu sont colorés et comptés comme du Python
+# (le plus proche : blocs ouverts par « : »). Voir docs/GITHUB.md.
+*.uwu linguist-language=Python linguist-detectable=true
+
+# Les .uwu restent en UTF-8 avec fins de ligne LF (♡, ←, ✧ dans le code).
+*.uwu text eol=lf encoding=utf-8

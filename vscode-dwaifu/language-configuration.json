@@ -1,0 +1,24 @@
+{
+  "comments": {
+    "lineComment": "<3",
+    "blockComment": ["<333", "333>"]
+  },
+  "brackets": [
+    ["(", ")"],
+    ["[", "]"]
+  ],
+  "autoClosingPairs": [
+    { "open": "(", "close": ")" },
+    { "open": "[", "close": "]" },
+    { "open": "\"", "close": "\"", "notIn": ["string"] }
+  ],
+  "surroundingPairs": [
+    ["(", ")"],
+    ["[", "]"],
+    ["\"", "\""]
+  ],
+  "indentationRules": {
+    "increaseIndentPattern": ":\\s*(<3.*)?$",
+    "decreaseIndentPattern": "^\\s*(desu|end|else|catch|finally|until|ara ara|ehh\\?|gomen|daijoubu)\\b"
+  }
+}

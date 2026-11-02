@@ -1,0 +1,30 @@
+<333 ✿ CLUB D'ADDITION ✿ 333>
+
+club:
+    Yuki-sama   : boss
+    Hikari-chan : reader, shy
+    Sora-chan   : counter
+    Sakura-chan : counter, explosive
+    Ren-chan    : counter
+    Rin-chan    : counter, tsundere
+    Nana-chan   : judge
+    Mio-chan    : writer
+desu
+
+left  = Sora ♡ Sakura                <3 dizaines ♡ unités <3
+right = Ren ♡ Rin
+
+ohayo
+write "Donne-moi deux nombres, Senpai !" onegai
+left  ← read onegai
+right ← read onegai
+sugoi Hikari                         ^_^ elle est timide, ça l'aide ^_^
+
+until right == 0:
+    left++  onegai
+    right-- onegai
+desu
+
+write left ✧ onegai
+arigatou minna
+oyasumi

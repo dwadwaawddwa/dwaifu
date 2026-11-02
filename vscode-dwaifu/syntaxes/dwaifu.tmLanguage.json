@@ -1,0 +1,132 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "dwaifu",
+  "scopeName": "source.dwaifu",
+  "fileTypes": ["uwu"],
+  "patterns": [
+    { "include": "#strings" },
+    { "include": "#comments" },
+    { "include": "#club" },
+    { "include": "#errors" },
+    { "include": "#members" },
+    { "include": "#definitions" },
+    { "include": "#control" },
+    { "include": "#kawaii" },
+    { "include": "#capacities" },
+    { "include": "#actions" },
+    { "include": "#v2-phrases" },
+    { "include": "#constants" },
+    { "include": "#numbers" },
+    { "include": "#operators" }
+  ],
+  "repository": {
+    "strings": {
+      "name": "string.quoted.double.dwaifu",
+      "begin": "\"",
+      "end": "\"|$",
+      "patterns": [{ "name": "constant.character.escape.dwaifu", "match": "\\\\." }]
+    },
+    "comments": {
+      "patterns": [
+        { "name": "comment.block.dwaifu", "begin": "<333", "end": "333>" },
+        { "name": "comment.line.heart.dwaifu", "begin": "<3", "end": "<3|$" },
+        { "name": "comment.line.flower.dwaifu", "begin": "✿", "end": "✿|$" },
+        { "name": "comment.line.smile.dwaifu", "begin": "\\^_\\^", "end": "\\^_\\^|$" },
+        { "name": "comment.line.todo.dwaifu", "match": "\\(╯°□°\\)╯.*$" },
+        { "name": "comment.line.kaomoji.dwaifu", "match": "\\(◕‿◕\\)(?!\\s*$).*$" }
+      ]
+    },
+    "club": {
+      "name": "keyword.declaration.club.dwaifu",
+      "match": "^\\s*(club)(?=\\s*:)"
+    },
+    "errors": {
+      "name": "entity.name.type.error.dwaifu",
+      "match": "\\b[A-Z][A-Za-z]*Baka\\b"
+    },
+    "members": {
+      "patterns": [
+        { "name": "entity.name.class.boss.dwaifu", "match": "\\b[A-Za-z][A-Za-z0-9_]*-sama\\b" },
+        { "name": "variable.other.member.dwaifu", "match": "\\b[A-Za-z][A-Za-z0-9_]*-chan\\b" }
+      ]
+    },
+    "definitions": {
+      "patterns": [
+        {
+          "match": "\\b(jutsu)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": { "name": "keyword.declaration.function.dwaifu" },
+            "2": { "name": "entity.name.function.dwaifu" }
+          }
+        },
+        {
+          "match": "\\b(recipe)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": { "name": "keyword.declaration.function.dwaifu" },
+            "2": { "name": "entity.name.function.dwaifu" }
+          }
+        },
+        {
+          "match": "\\b(plan)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": { "name": "keyword.declaration.plan.dwaifu" },
+            "2": { "name": "entity.name.class.boss.dwaifu" }
+          }
+        },
+        {
+          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s+(no jutsu)\\b",
+          "captures": {
+            "1": { "name": "entity.name.function.dwaifu" },
+            "2": { "name": "keyword.control.call.dwaifu" }
+          }
+        },
+        {
+          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)(?=\\()",
+          "name": "entity.name.function.call.dwaifu"
+        }
+      ]
+    },
+    "control": {
+      "patterns": [
+        { "name": "keyword.control.dwaifu", "match": "\\b(if|else|while|until|repeat|times|forever|break|next|return|desu|end|try|catch|finally|start|wait|clone|poof|gacha|from|by|is|not|empty)\\b" },
+        { "name": "keyword.control.kawaii.dwaifu", "match": "(nani\\?|ehh\\?|\\bara ara\\b|\\bganbatte\\b|\\bbye_bye\\b|\\bnext_desu\\b|\\bkami-sama onegai\\b|\\bgomen\\b|\\bdaijoubu\\b|\\bsayonara\\b|\\bkage bunshin\\b|\\bhajime!|\\bchotto matte\\b)" }
+      ]
+    },
+    "kawaii": {
+      "name": "support.function.kawaii.dwaifu",
+      "match": "\\b(ohayo|oyasumi|minna|tea time|onegai|arigatou|sugoi|headpat|baka|gift)\\b"
+    },
+    "capacities": {
+      "patterns": [
+        { "name": "storage.type.capacity.dwaifu", "match": "\\b(boss|reader|writer|counter|judge|keeper|packer|converter|guesser|fetcher|bossing|reading|writing|counting|comparing|keeping|packing|converting|guessing|fetching)\\b" },
+        { "name": "storage.modifier.personality.dwaifu", "match": "\\b(lazy|shy|tsundere|kuudere|dandere|yandere|genki|explosive|clumsy|ojou)\\b" }
+      ]
+    },
+    "actions": {
+      "name": "support.function.action.dwaifu",
+      "match": "\\b(read|all|write|guess|recall|first|last|of|copy|drop|keep|as|forget|pack|into|convert|to|send|fetch|number|text|list|nya|says)\\b"
+    },
+    "v2-phrases": {
+      "name": "support.function.v2.dwaifu",
+      "match": "\\b(born waifu named|is made for|personality is|line up|as number|that grows|wake up everyone|go sleep everyone|wake up|go sleep|take a break|give it to|show it to|ask|for it|listen|tell|report to|count up|count down|compare it with|compare|keep it as|bring|pack it|unpack|turn it into|guess between|send it to|take|with|do|hire a|waifu as|fire|stop repeating|next round|stop the recipe|everyone)\\b"
+    },
+    "constants": {
+      "name": "constant.language.dwaifu",
+      "match": "\\b(hai|iie|muda|same|different|bigger|smaller|nothing)\\b"
+    },
+    "numbers": {
+      "name": "constant.numeric.dwaifu",
+      "match": "-?\\b\\d+(\\.\\d+)?\\b"
+    },
+    "operators": {
+      "patterns": [
+        { "name": "keyword.operator.assignment.dwaifu", "match": "←|<-|\\+=|-=|\\*=|/=" },
+        { "name": "keyword.operator.row.dwaifu", "match": "♡|<>" },
+        { "name": "keyword.operator.comparison.dwaifu", "match": "==|!=|>=|<=|>|<" },
+        { "name": "keyword.operator.increment.dwaifu", "match": "\\+\\+|--" },
+        { "name": "keyword.operator.arrow.dwaifu", "match": "→|~>|\\.\\." },
+        { "name": "keyword.operator.sparkle.dwaifu", "match": "✧" }
+      ]
+    }
+  }
+}

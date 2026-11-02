@@ -1,0 +1,37 @@
+<333
+   maths.uwu — les quatre opérations, reconstruites avec ++ et --
+   gacha "maths.uwu" pour les utiliser ; x += y, x -= y, x *= y et x /= y
+   appellent ces jutsu sur un clone de y.
+333>
+
+jutsu add(A, B):                  <3 A ← A + B ; B finit à 0 <3
+    until B == 0:
+        A++
+        B--
+    desu
+desu
+
+jutsu subtract(A, B):             <3 A ← A − B ; B finit à 0 <3
+    until B == 0:
+        A--
+        B--
+    desu
+desu
+
+jutsu multiply(A, B):             <3 A ← A × B ; B finit à 0 <3
+    clone base: counter ♡ ...
+    base ← A
+    A ← 0
+    until B == 0:
+        A += base
+        B--
+    desu
+desu
+
+jutsu divide(A, B, Q):            <3 Q ← A ÷ B ; A garde le reste ; B ne bouge pas <3
+    Q ← 0
+    while A >= B:
+        A -= B
+        Q++
+    desu
+desu

@@ -1,0 +1,27 @@
+{
+  "name": "dwaifu",
+  "displayName": "dwaifu",
+  "description": "Coloration syntaxique du langage dwaifu (fichiers .uwu)",
+  "version": "0.1.0",
+  "publisher": "dwa",
+  "license": "MIT",
+  "engines": { "vscode": "^1.60.0" },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "dwaifu",
+        "aliases": ["dwaifu", "uwu"],
+        "extensions": [".uwu"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dwaifu",
+        "scopeName": "source.dwaifu",
+        "path": "./syntaxes/dwaifu.tmLanguage.json"
+      }
+    ]
+  }
+}
