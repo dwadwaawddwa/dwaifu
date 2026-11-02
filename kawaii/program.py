@@ -124,6 +124,8 @@ def refs(node):
 def check(program):
     """Les vérifications d'avant le départ. Rend la liste des avertissements."""
     if not program.members:
+        if all(n.kind in ("jutsu", "gacha") for n in program.body):
+            return program.warnings     # une bibliothèque : seulement des jutsu
         raise Baka("NoBossBaka", "Il n'y a pas de bloc club: (et donc pas de présidente).")
     names = set()
     for m in program.members:
